@@ -1,0 +1,64 @@
+---
+title: "spider plot for students"
+output: html_document
+---
+
+```{r,echo=FALSE}
+
+library(plotly)
+
+p <- plot_ly(
+  type = 'scatterpolar',
+  mode='lines'
+  
+)%>%
+  
+  add_trace(
+    r = c(30,25,6,3,30),
+    theta = c('cat1','cat2','da1','quiz','cat1'),
+    name = 'A'
+  )%>%
+  
+  add_trace(
+    r = c(32,27,6,5,32),
+    theta = c('cat1','cat2','da1','quiz','cat1'),
+    name = 'B'
+  )%>%
+  
+  add_trace(
+    r = c(40,35,7,4,40),
+    theta = c('cat1','cat2','da1','quiz','cat1'),
+    name = 'C'
+  )%>%
+  
+  add_trace(
+    r = c(38,37,8,7,38),
+    theta = c('cat1','cat2','da1','quiz','cat1'),
+    name = 'D'
+  )%>%
+  
+  add_trace(
+    r = c(43,23,7,5,43),
+    theta = c('cat1','cat2','da1','quiz','cat1'),
+    name = 'E'
+  )%>%
+  
+  add_trace(
+    r = c(34,30,8,6,34),
+    theta = c('cat1','cat2','da1','quiz','cat1'),
+    name = 'F'
+  )%>%
+  
+  
+  
+  layout(
+    polar = list(
+      radialaxis = list(
+        visible = T,
+        range = c(0,50)
+      )
+    )
+  )
+p
+```
+
